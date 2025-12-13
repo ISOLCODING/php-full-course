@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap');
+:root {
+   /* Warna Utama: Biru Langit Modern */
+    --primary-color: #0284c7;       
+    --primary-hover: #0369a1;       
+    
+    /* Warna Aksen: Navy Gelap (Seperti Text Editor) */
+    --dark-accent: #0f172a;         
+    
+    /* Background & Surface */
+    --bg-color: #f8fafc;            /* Putih kebiruan sangat muda */
+    --card-bg: #ffffff;             
+    
+    /* Text Colors */
+    --text-main: #334155;           /* Slate Grey */
+    --text-heading: #0f172a;        /* Hampir Hitam */
+    
+    /* UI Elements */
+    --border-radius: 16px;          /* Sudut lebih membulat */
+    --border-line: #e2e8f0;         /* Garis tipis */
+    --shadow-soft: 0 10px 40px -10px rgba(0,0,0,0.05); /* Bayangan sangat halus */
+}
+* {
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+   padding: 0;   
+}
+
+body {
+     font-family: 'Space Grotesk', sans-serif; /* Font gaya Tech */
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   min-height: 100vh;
+}
+/* 3 header styling */
+h1 {
+    font-family: 'Space Grotesk', sans-serif; /* Font gaya Tech */
+    color: var(--text-heading);
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+    background: linear-gradient(to right, #0f172a, #0284c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Efek gradasi pada teks judul */
+}
+.subtitle{
+   font-family: 'Space Grotesk', sans-serif; /* Font gaya Tech */
+   color: var(--text-heading);
+  font-size: 1.15rem;
+    margin-bottom: 3.5rem;
+    max-width: 600px;
+    font-weight: 400;
+}
+/* 4 main layout Container */
+main{
+   width: 100%;
+   max-width: 900px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2.5rem;
+}
+/* 5 Card Styling */
+section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    padding: 2rem;
+    width: 100%;
+    border: 1px solid var(--border-line);
+    box-shadow: var(--shadow-soft);
+}
+
+h2 {
+    font-family: 'Space Grotesk', sans-serif; /* Font gaya Tech */
+    color: var(--dark-accent);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+     display: flex;
+    align-items: center;
+}
+h2::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--border-line);
+    margin-left: 1rem;
+}
+h2::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 24px;
+    background-color: var(--primary-color);
+    margin-right: 12px;
+    font-size: 5px;
+}
+p {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+/* 6 Lists style */
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    color: var(--text-main);
+    font-weight: 500;
+    background-color: #f1f5f9; /* Light Slate Background for list items */
+    transition: background 0.2s ease;
+}
+
+li:hover {
+    background-color: #e2e8f0;
+}
+/* link styling */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all color 0.3s ease, border-bottom-color 0.3s ease;
+}
+a:hover {
+    color: var(--primary-hover);
+    border-bottom: 2px solid var(--primary-hover);
+}
+/* 7 nested section (next steps) -styleo berbeda */
+.resources .next-steps {
+    background-color: #e0f2fe; /* Light Blue Background */
+    border: 1px solid var(--primary-color);
+}
