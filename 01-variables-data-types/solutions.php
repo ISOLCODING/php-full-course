@@ -56,3 +56,20 @@ if ($punya_cicilan) {
     echo "Cicilan      : " . formatRupiah($cicilan_per_bulan) . "\n";
 }
 echo "Gaji Bersih  : " . $gaji_bersih_terformat . "\n";
+
+// --- KASUS 3: CEK TIPE DATA (DEBUGGING) ---
+// Skenario: Memastikan tipe data benar agar tidak error saat hitungan.
+echo "--- KASUS 3: CEK TIPE DATA (VAR_DUMP) ---\n";
+
+$umur = 25;           // Integer
+$ipk  = 3.85;         // Float/Double
+$nama = "Dedi";       // String
+$aktif= true;         // Boolean
+$data = null;         // Null
+
+// var_dump() menampilkan tipe data dan nilainya (Sangat berguna untuk debug)
+var_dump($umur);
+var_dump($ipk);
+var_dump($aktif);
+var_dump($nama);
+?>
